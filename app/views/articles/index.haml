@@ -1,0 +1,13 @@
+%h1 This is your fucking article
+%div{ :class => 'article_list' }
+  %table
+    %tr
+      %th Title
+      %th Author
+      %th Text
+    - @articles.each do |article|
+      %tr
+        %td= article.title
+        %td= article.author
+        %td= article.text
+= link_to "Add New Articles", new_article_path

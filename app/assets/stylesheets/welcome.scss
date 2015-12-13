@@ -1,0 +1,96 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+	background-color: #1B1A1A;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #fff;
+	width: 960px;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin: 0 auto;
+}
+
+a {
+	text-decoration: none;
+	color: #5295DA;
+}
+
+h1 {
+	font-size: 28px;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: 26px;
+}
+
+h3 {
+	font-size: 22px;
+}
+
+h4 {
+	font-size: 18px;
+}
+
+ul, li {
+	list-style: none;
+	text-decoaration: none;
+}
+
+label {
+	width: 100px;
+}
+
+input[type="text"] {
+	padding: 5px;
+	width: 300px;
+	margin-top: 10px;
+}
+
+input[type="submit"] {
+	border: none;
+	background-color: #DFD240;
+	border-radius: 6px;
+	color: #000;
+	padding: 10px;
+	text-transform: uppercase;
+	cursor: pointer;
+
+	&:hover {
+		background-color: #F0E77F;
+	}
+}
+
+textarea {
+	width: 300px;
+	padding: 5px;
+	margin-top: 10px;
+}
+
+.article-list {
+	text-align: center;
+	border: 1px solid #ddd;
+	border-radius: 6px;
+	margin-top: 20px;
+	padding: 20px;
+
+	.article-container {
+		.article-body {
+			border-bottom: 1px solid #818181;
+		}
+	}
+}
+
+td {
+	padding: 10px;
+	margin-top: 20px;
+	min-width: 100px;
+}
+
+.form-error {
+	p {
+		color: #DC4444;
+	}
+}
