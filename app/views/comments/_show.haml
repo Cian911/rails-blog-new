@@ -1,0 +1,16 @@
+%h2 Comments
+
+- @article.comments.each do |comment|
+  %div{ :class => 'comment-container' }
+    %p
+      %strong Commentor
+      = comment.commentor
+    %p
+      %strong Email
+      = comment.email
+    %p
+      = comment.body
+    %p
+      = link_to 'Remove Comment', [comment.article, comment],
+                method: :delete,
+                data: { confirm: 'Are You Sure?' }

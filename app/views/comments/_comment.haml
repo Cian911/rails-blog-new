@@ -1,0 +1,13 @@
+%h2 Add a Comment
+= form_for([@article, @article.comments.build]) do |f|
+  %p
+    = f.label :commentor
+    = f.text_field :commentor
+  %p
+    = f.label :email
+    = f.text_field :email
+  %p
+    = f.label :body
+    = f.text_area :body
+  %p
+    = f.submit
