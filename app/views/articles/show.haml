@@ -6,3 +6,32 @@
       %p= @article.text
 = link_to "Add Article", new_article_path
 = link_to "Edit Article", edit_article_path
+= link_to "Destroy Article", article_path(@article), method: :delete,
+          data: { confirm: 'Are you sure?' }
+
+%h2 Comments
+
+- @article.comments.each do |comment|
+  %div{ :class => 'comment-container' }
+    %p
+      %strong Commentor
+      = comment.commentor
+    %p
+      %strong Email
+      = comment.email
+    %p
+      = comment.body
+
+%h2 Add a Comment
+= form_for([@article, @article.comments.build]) do |f|
+  %p
+    = f.label :commentor
+    = f.text_field :commentor
+  %p
+    = f.label :email
+    = f.text_field :email
+  %p
+    = f.label :body
+    = f.text_area :body
+  %p
+    = f.submit

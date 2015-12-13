@@ -17,7 +17,7 @@ class ArticlesController < ApplicationController
   end
 
   def update
-    @article = Article.find(:params[:id])
+    @article = Article.find(params[:id])
 
     if @article.update(article_params)
       redirect_to @article
@@ -35,6 +35,13 @@ class ArticlesController < ApplicationController
     else
       render 'new'
     end
+  end
+
+  def destroy
+    @article = Article.find(params[:id])
+    @article.destroy
+
+    redirect_to articles_path
   end
 
   private
