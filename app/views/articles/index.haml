@@ -10,4 +10,5 @@
         %td= article.title
         %td= article.author
         %td= article.text
+        %td= link_to "View", article_path(article)
 = link_to "Add New Articles", new_article_path
