@@ -1,19 +1,2 @@
 %h1 Edit Your Article
-%div{ :class => 'articles-form' }
-  = form_for :article, url: article_path(@article), method: :patch do |f|
-    - if @article.errors.any?
-      %div{ :class => 'form-error' }
-        - @article.errors.full_messages.each do |msg|
-          %p= msg
-    = f.label :author
-    = f.text_field :author
-    %br
-    = f.label :title
-    = f.text_field :title
-    %br
-    = f.label :text
-    = f.text_area :text
-    %br
-    = f.submit
-
-= link_to "Back", articles_path
+= render 'form'
